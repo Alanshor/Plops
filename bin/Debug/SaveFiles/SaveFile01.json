@@ -1,0 +1,72 @@
+{
+  "$id": "1",
+  "_lastTimeSaved": "2025-07-13T11:27:50.843374+02:00",
+  "hasEdited": false,
+  "Plops": {
+    "$id": "2",
+    "$values": [
+      {
+        "$id": "3",
+        "Name": "Alan",
+        "Level": 5,
+        "HP": 10,
+        "MaxHP": 26,
+        "Damage": 5,
+        "EXP": 0,
+        "EXP_for_next_LevelUp": 49,
+        "Parents": {
+          "$id": "4",
+          "$values": []
+        },
+        "Group": {
+          "$id": "5",
+          "ID": 0,
+          "Name": "SunShard",
+          "Members": {
+            "$id": "6",
+            "$values": [
+              {
+                "$ref": "3"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "$id": "7",
+        "Name": "Max",
+        "Level": 1,
+        "HP": 10,
+        "MaxHP": 10,
+        "Damage": 1,
+        "EXP": 0,
+        "EXP_for_next_LevelUp": 10,
+        "Parents": {
+          "$id": "8",
+          "$values": [
+            {
+              "$ref": "3"
+            }
+          ]
+        },
+        "Group": {
+          "$id": "9",
+          "ID": 0,
+          "Name": "Keine Gruppe",
+          "Members": {
+            "$id": "10",
+            "$values": []
+          }
+        }
+      }
+    ]
+  },
+  "Groups": {
+    "$id": "11",
+    "$values": [
+      {
+        "$ref": "5"
+      }
+    ]
+  }
+}

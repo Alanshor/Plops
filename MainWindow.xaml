@@ -1,0 +1,51 @@
+﻿<Window x:Class="Happy_Plops.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Happy_Plops"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1020" ResizeMode="NoResize">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Datei">
+                <MenuItem Header="_Neues Spiel" Click="New_Click"/>
+                <MenuItem Header="_Speichern" Click="Save_Click"/>
+                <MenuItem Header="_Laden" Click="Open_Click"/>
+                <Separator/>
+                <MenuItem Header="_Beenden" Click="Close_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Bearbeiten">
+                <MenuItem Header="_Kopieren"/>
+                <MenuItem Header="_Einfügen"/>
+            </MenuItem>
+            <MenuItem Header="_Hilfe">
+                <MenuItem Header="_Über" Click="About_Click"/>
+            </MenuItem>
+        </Menu>
+        <!-- Hier kommt dein restlicher Inhalt -->
+        <Grid>
+            <!-- Grid in zwei Zeilen aufteilen -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Text zentriert in der Mitte -->
+            <TextBlock Text="Willkommen!" 
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Center" 
+               FontSize="16" 
+               Grid.Row="0"/>
+
+            <!-- Buttons mittig unten -->
+            <StackPanel Grid.Row="1" 
+                Orientation="Horizontal" 
+                HorizontalAlignment="Center" 
+                Margin="0,20,0,20">
+                <Button Content="Neuer Plop" Width="400" Margin="10,0" Height="100" HorizontalAlignment="Center" FontSize="20" Click="Button_Click"/>
+                <Button Content="Neue Gruppe" Width="400" Margin="10,0" HorizontalAlignment="Center" FontSize="20"/>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>
